@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Address Book Manager</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Address Book Manager</h1>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="mobile">Mobile:</label>
+        <input type="tel" id="mobile" name="mobile" required />
+        <button type="button" id="add" onclick="addContact()">Add Contact</button>
+      </form>
+      <br />
+      <input type="text" id="search" onkeyup="filter()" placeholder="Search by Name or Mobile" />
+      <table id="contacts">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="contact-list"></tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
